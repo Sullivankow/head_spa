@@ -48,7 +48,9 @@ export function CookieConsent({ openPreferences, onClosePreferences }: CookieCon
     }, [openPreferences, consent]);
 
     function saveConsent(nextConsent: CookieConsentValue) {
-        localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(nextConsent));
+        try {
+            localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(nextConsent));
+        } catch { }
         setConsent(nextConsent);
         setDraftConsent(nextConsent);
         setShowDetails(false);

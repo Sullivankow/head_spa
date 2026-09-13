@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { PrismaService } from "./prisma.service";
+import { CreateReservationDto } from "./create-reservation.dto";
 import { Resend } from "resend";
 
 @Injectable()
@@ -8,7 +9,7 @@ export class ReservationsService {
   private readonly logger = new Logger(ReservationsService.name);
   constructor(private readonly prisma: PrismaService, private readonly config: ConfigService) {}
 
-  async create(dto: any) {
+  async create(dto: CreateReservationDto) {
     if (dto.website) return { ok: true }; // honeypot anti-spam
     const date = new Date(`${dto.date}T12:00:00`);
     if (Number.isNaN(date.getTime())) throw new BadRequestException("Date invalide");

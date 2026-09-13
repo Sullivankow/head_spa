@@ -9,7 +9,9 @@ export function Footer({ onManageCookies, onOpenPrivacy, onOpenLegal }: FooterPr
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                 <button type="button" onClick={onManageCookies} className="underline decoration-black/20 underline-offset-4 transition hover:text-ink">Gérer mes cookies</button>
                 <button type="button" onClick={onOpenPrivacy} className="underline decoration-black/20 underline-offset-4 transition hover:text-ink">Politique de confidentialité</button>
-                <span> <button type="button" onClick={onOpenLegal} className="underline decoration-black/20 underline-offset-4 transition hover:text-ink">Mentions légales</button>© 2026 · Tous droits réservés ·</span>
+                <span>
+                    <button type="button" onClick={onOpenLegal} className="underline decoration-black/20 underline-offset-4 transition hover:text-ink">Mentions légales</button>
+                </span>
                 <span className="inline-flex items-center gap-1">Fait avec <Heart aria-hidden="true" className="h-3 w-3 fill-current text-red-500" /> par <a href="https://www.facebook.com/AvenWebSully?locale=fr_FR" target="_blank" rel="noreferrer" className="font-semibold underline decoration-black/20 underline-offset-4 transition hover:text-ink">Aven Web</a></span>
             </div>
         </div>
