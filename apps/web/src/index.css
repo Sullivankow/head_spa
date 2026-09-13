@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Manrope:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #f7f2eb; color: #2c2926; font-family: Inter, sans-serif; }
-::selection { background: #d9c6bb; color: #2c2926; }
+body { margin: 0; background: #f8f3ea; color: #33261d; font-family: Manrope, sans-serif; }
+button, input, select, textarea { font: inherit; }
+::selection { background: #d8bd88; color: #33261d; }
+.gold-line { background: linear-gradient(90deg, transparent, #c7a167 18%, #f1d39b 50%, #c7a167 82%, transparent); }
+.gold-text { background: linear-gradient(110deg, #8d6a3f, #e0bd7b 48%, #9a713d); background-clip: text; color: transparent; }
+.hero-wash { background: radial-gradient(circle at 76% 20%, rgba(216, 189, 136, .38), transparent 28%), linear-gradient(135deg, #fbf7f0 0%, #f4eadc 54%, #e9d9c3 100%); }
+details summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

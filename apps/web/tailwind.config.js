@@ -4,17 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#2c2926",
-        cream: "#f7f2eb",
-        sand: "#e8ddd0",
-        rose: "#b8897c",
-        sage: "#77836f"
+        ink: "#33261d",
+        cream: "#f8f3ea",
+        sand: "#eee3d2",
+        rose: "#c7a167",
+        sage: "#8d6a3f",
       },
       fontFamily: {
-        display: ["Cormorant Garamond", "serif"],
-        sans: ["Inter", "sans-serif"]
-      }
-    }
+        display: ["Bodoni Moda", "serif"],
+        sans: ["Manrope", "sans-serif"],
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
