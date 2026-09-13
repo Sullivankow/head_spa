@@ -27,7 +27,7 @@ En production, utiliser un domaine vérifié dans Resend et une adresse `MAIL_FR
 
 ### Personnalisation
 
-Le contenu marketing principal est dans `apps/web/src/App.tsx`. Les couleurs et composants sont centralisés dans `apps/web/src/index.css`.
+Le contenu marketing est réparti dans les composants de `apps/web/src/components/`. Les couleurs et styles globaux sont centralisés dans `apps/web/src/index.css`.
 Pour activer le contact WhatsApp direct, renseigner `VITE_WHATSAPP_NUMBER` dans `apps/web/.env` au format international, sans `+` ni espaces.
 
 ## SEO / conversion déjà prévus
@@ -42,6 +42,7 @@ Pour activer le contact WhatsApp direct, renseigner `VITE_WHATSAPP_NUMBER` dans 
 - design mobile-first et animations respectueuses de prefers-reduced-motion
 - API de réservation avec validation, persistance PostgreSQL et email Resend
 - protection anti-spam simple via honeypot côté serveur
+- gestionnaire de consentement local réversible avec préférences et notice de confidentialité
 
 ## À compléter avant mise en production
 

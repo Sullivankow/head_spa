@@ -6,7 +6,7 @@ import { Resend } from "resend";
 @Injectable()
 export class ReservationsService {
   private readonly logger = new Logger(ReservationsService.name);
-  constructor(private prisma: PrismaService, private config: ConfigService) {}
+  constructor(private readonly prisma: PrismaService, private readonly config: ConfigService) {}
 
   async create(dto: any) {
     if (dto.website) return { ok: true }; // honeypot anti-spam
