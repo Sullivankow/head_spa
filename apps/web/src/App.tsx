@@ -6,6 +6,7 @@ import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
+import { LegalModal } from "./components/LegalModal";
 import { QuoteSection } from "./components/QuoteSection";
 import { ReservationSection } from "./components/ReservationSection";
 import { RitualsSection } from "./components/RitualsSection";
@@ -21,6 +22,7 @@ export default function App() {
   const [menu, setMenu] = useState(false);
   const [cookiePreferencesOpen, setCookiePreferencesOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [legalOpen, setLegalOpen] = useState(false);
   const [form, setForm] = useState<ReservationForm>(initialReservationForm);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -50,10 +52,11 @@ export default function App() {
       <FaqSection />
       <ReservationSection booked={booked} form={form} treatments={treatments} onChange={setForm} onSubmit={submit} />
     </main>
-    <Footer onManageCookies={() => setCookiePreferencesOpen(true)} onOpenPrivacy={() => setPrivacyOpen(true)} />
+    <Footer onManageCookies={() => setCookiePreferencesOpen(true)} onOpenPrivacy={() => setPrivacyOpen(true)} onOpenLegal={() => setLegalOpen(true)} />
     <WhatsAppButton />
     <CookieConsent openPreferences={cookiePreferencesOpen} onClosePreferences={() => setCookiePreferencesOpen(false)} />
     {privacyOpen && <PrivacyModal onClose={() => setPrivacyOpen(false)} />}
+    {legalOpen && <LegalModal onClose={() => setLegalOpen(false)} />}
     {open && <BookingModal onClose={() => setOpen(false)} />}
   </div>;
 }
