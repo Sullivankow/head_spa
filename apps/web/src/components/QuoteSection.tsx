@@ -1,0 +1,5 @@
+import { Heart } from "lucide-react";
+
+export function QuoteSection() {
+    return <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32"><div className="relative overflow-hidden rounded-[2.5rem] bg-ink p-8 text-white sm:p-12 lg:p-16"><div className="gold-line absolute left-0 right-0 top-0 h-px" /><div className="grid gap-12 lg:grid-cols-[1fr_.7fr]"><div><Heart className="mb-10 h-7 w-7 text-[#e0bd7b]" /><h2 className="max-w-2xl font-display text-5xl leading-none sm:text-6xl">« J’ai enfin pris<br /><i className="text-[#e0bd7b]">le temps.</i> »</h2><p className="mt-7 max-w-lg text-sm leading-7 text-white/60">Le headspa n’est pas seulement un soin. C’est un rendez-vous avec soi-même, dans une cabine pensée pour ralentir.</p></div><div className="flex items-end"><div className="border-l border-[#c7a167]/60 pl-6"><p className="font-display text-3xl">Une heure où le monde peut attendre.</p><p className="mt-3 text-xs uppercase tracking-[.18em] text-white/50">MLC Head Spa</p></div></div></div></div></section>;
+}

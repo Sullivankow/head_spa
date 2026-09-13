@@ -1,0 +1,8 @@
+import { ArrowUpRight } from "lucide-react";
+import { Treatment } from "../data";
+
+type RitualsSectionProps = { readonly treatments: Treatment[]; readonly onSelectTreatment: (title: string) => void };
+
+export function RitualsSection({ treatments, onSelectTreatment }: RitualsSectionProps) {
+    return <section id="soins" className="bg-sand px-5 py-24 lg:py-32"><div className="mx-auto max-w-7xl"><div className="mb-14 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="mb-4 text-xs font-semibold uppercase tracking-[.2em] text-sage">Les rituels</p><h2 className="font-display text-5xl sm:text-6xl">Choisissez votre<br /><i className="gold-text">parenthèse.</i></h2></div><p className="max-w-sm text-sm leading-6 text-black/60">Des durées pensées pour vous laisser le temps d’arriver, de lâcher prise et de repartir autrement.</p></div><div className="grid gap-5 lg:grid-cols-3">{treatments.map((treatment, index) => <article key={treatment.title} className={`rounded-[2rem] p-7 ${index === 1 ? "bg-ink text-white" : "bg-white/55"}`}><div className="flex justify-between text-sm"><span>{treatment.duration}</span><span>{treatment.price}</span></div><h3 className="mt-20 font-display text-4xl">{treatment.title}</h3><p className={`mt-4 min-h-24 text-sm leading-6 ${index === 1 ? "text-white/65" : "text-black/60"}`}>{treatment.desc}</p><button type="button" onClick={() => onSelectTreatment(treatment.title)} className="mt-6 w-full rounded-full border border-current/20 py-3 text-sm font-semibold transition hover:bg-white/20">Réserver ce rituel <ArrowUpRight className="ml-1 inline h-4 w-4" /></button></article>)}</div></div></section>;
+}

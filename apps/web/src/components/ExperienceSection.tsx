@@ -1,0 +1,5 @@
+const steps = [["01", "Déconnecter", "Une bulle loin du rythme quotidien, dans une atmosphère calme et intime."], ["02", "Relâcher", "Des gestes précis et enveloppants pour apaiser les tensions et favoriser la détente."], ["03", "Rayonner", "Une sensation de légèreté et un cuir chevelu choyé, au sortir de la séance."]];
+
+export function ExperienceSection() {
+    return <section id="experience" className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32"><div className="grid gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><p className="mb-4 text-xs font-semibold uppercase tracking-[.2em] text-sage">L’expérience MLC</p><h2 className="font-display text-5xl leading-none sm:text-6xl">Le luxe de<br /><i className="gold-text">ne rien faire.</i></h2></div><div className="grid gap-10 sm:grid-cols-3">{steps.map(([number, title, description]) => <div key={number} className="border-t border-black/15 pt-5"><span className="text-xs text-black/40">{number}</span><h3 className="mt-8 font-display text-3xl">{title}</h3><p className="mt-3 text-sm leading-6 text-black/60">{description}</p></div>)}</div></div></section>;
+}

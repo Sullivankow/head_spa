@@ -21,13 +21,17 @@ npm run dev
 - Health : http://localhost:3000/health
 
 ### Resend
+
 Renseigner `RESEND_API_KEY`, `DIRECTOR_EMAIL` et `MAIL_FROM` dans `apps/api/.env`.
 En production, utiliser un domaine vérifié dans Resend et une adresse `MAIL_FROM` correspondant à ce domaine.
 
 ### Personnalisation
+
 Le contenu marketing principal est dans `apps/web/src/App.tsx`. Les couleurs et composants sont centralisés dans `apps/web/src/index.css`.
+Pour activer le contact WhatsApp direct, renseigner `VITE_WHATSAPP_NUMBER` dans `apps/web/.env` au format international, sans `+` ni espaces.
 
 ## SEO / conversion déjà prévus
+
 - title + meta description
 - Open Graph / Twitter cards
 - données structurées JSON-LD LocalBusiness + Service
@@ -40,6 +44,7 @@ Le contenu marketing principal est dans `apps/web/src/App.tsx`. Les couleurs et 
 - protection anti-spam simple via honeypot côté serveur
 
 ## À compléter avant mise en production
+
 - vrai nom, adresse, téléphone, horaires et prix
 - photos réelles optimisées WebP/AVIF
 - domaine et favicon
